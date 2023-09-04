@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 public class TimeOfRestTest {
     @ParameterizedTest
-    @CsvFileSource(files = "src\\test\\resources\\rest.csv")
+    @CsvFileSource(files = "src/test/resources/rest.csv")
     public void testCountMonthsOfRest(int expected, int income, int expenses, int threshold) {
         TimeOfRest rest = new TimeOfRest();
         int actual = rest.calculate(income, expenses, threshold);
